@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">This is a paragraph for DOM</p>
+
+    <h1>Counter</h1>  
+    <div id="counter">0</div>  
+    <button id="increaseButton">Increase</button>  
+    <button id="decreaseButton">Decrease</button>  
+
+    <button onclick="Para()">Change Para</button>
+
+    <script>
+            function Para(){
+            const paragraph = document.getElementById("para")
+            paragraph.innerHTML="Heading is changed with DOM"
+            paragraph.style.color="red"
+        }
+//Counter function of Increment / decrement 
+        let count = 0;  
+
+        const counterDisplay = document.getElementById('counter');  
+        const increaseButton = document.getElementById('increaseButton');  
+        const decreaseButton = document.getElementById('decreaseButton');  
+
+        function updateCounter() {  
+            counterDisplay.textContent = count;  
+        }  
+
+        increaseButton.onclick = function() {  
+            count++;  
+            updateCounter();  
+        };  
+
+        decreaseButton.onclick = function() {  
+            count--;  
+            updateCounter();  
+        };  
+    </script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+
 // // console.log('Hello World')
 // // // How to declare Variable
 // // // var
@@ -7,7 +8,7 @@
 // //     var a = 10;
 // //     console.log(a)
 
-const { compile } = require("tailwindcss")
+// const { compile } = require("tailwindcss")
 
 // // }
 // // {
@@ -145,12 +146,81 @@ const { compile } = require("tailwindcss")
 // console.log(arr1)
 
 
-var arr = [10, 4, 6, 2, 6, 9, 34, 3, 5, 19];  
-let max = arr[0];
+// var arr = [10, 4, 6, 2, 6, 9, 34, 3, 5, 19];  
+// let max = arr[0];
 
-for (let i = 1; i < arr.length; i++) { 
-    if (max < arr[i]) {  
-        max = arr[i];  
+// for (let i = 1; i < arr.length; i++) { 
+//     if (max < arr[i]) {  
+//         max = arr[i];  
+//     }  
+// }  
+// console.log("max element of array is : ", max);  
+
+
+// let a = 0;
+// for(let i = 10; i <=100; i++){
+//     if(i%7==0){
+//         a=i;
+//         break;
+//     }
+// }
+// console.log(a);
+
+// for(let i=1; i<=20; i++){
+//     if(i%3==0){
+//         continue;
+//     }else{
+//         console.log(i);
+//     }
+// }
+// //print the stars
+// for(let i=0; i<=5; i++){
+//     row=""
+//     for(j=0; j <i;j++){
+//         row+="*"
+//     }
+//     console.log(row)
+// }
+
+//write a function that calculates the function of given number 
+// let a = 1;
+// for(let i = 1; i <=5; i++){
+//     a=a*i;
+// }
+// console.log(a);
+
+//write a program to count the number of vowels in string
+let vowelCount = 0;   
+let s = "wdhgsjhdgudoasjkbdwweouiewyb";  
+
+for (let i = 0; i < s.length; i++) { 
+    if (s[i] === 'a' || s[i] === 'e' || s[i] === 'i' || s[i] === 'o' || s[i] === 'u') {
+        vowelCount++;  
     }  
 }  
-console.log("max element of array is : ", max);  
+
+console.log(vowelCount);  
+
+
+
+//by using function
+
+// function countVowels(str) {
+//     let count = 0;
+//     let vowels = "aeiouAEIOU";
+
+//     for (let char of str) {
+//         if (vowels.includes(char)) {
+//             count++;
+//         }
+//     }
+    
+//     return count;
+// }
+
+// // Example usage:
+// let input = "Hello World!";
+// console.log("Number of vowels:", countVowels(input));
+
+ 
+    

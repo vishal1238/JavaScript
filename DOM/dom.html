@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            border: 2px solid black;
+            height: 2cm;
+            width: 2cm;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">Hello World</p>
+    <p>Hello Wolrd1</p>  
+    <p>Hello Wolrd1</p>  
+    <p class="p5">Hello Wolrd2</p>  
+    <p class="p5">Hello Wolrd2</p>  
+    <img src="cricket.jpg" alt="image1" id="img1">
+    <br>
+    <a id="a1" href="Dom2.html">click me</a>
+    <div id="div1"></div>
+
+    <script>  
+        document.getElementById("p1").innerHTML = "<h1>This is Javascript</h1>";  
+        document.getElementById("p1").innerText="<h1>This is Javascript</h1>"
+        document.getElementsByTagName("p1")
+
+        let paragraphs = document.getElementsByTagName("p");  
+        for (let i = 0; i < paragraphs.length; i++) {  
+            paragraphs[i].innerHTML = "Para Changed using tag name"; 
+        }  
+
+        let text1 = document.getElementsByClassName("p5");  
+        for (let i = 0; i < text1.length; i++) {  
+            text1[i].innerHTML = "Para Changed using class name";
+        }  
+
+        var q = document.querySelector("p");  
+        q.innerHTML = "Para changed using query selector"; 
+        var text3= document.querySelectorAll("p")
+        for (let i = 0; i < text3.length; i++) {  
+            text3[i].innerHTML = "Para Changed using class name";
+        }
+
+        // document = object & getElementId = method
+        document.getElementById("img1").src="football.avif"
+        document.getElementById("img1").alt="image2"
+        document.getElementById("a1").alt="index.html"
+        //when we fech css
+        document.getElementById("div1").style.backgroundColor="yellow"
+        document.getElementById("div1").style.height="5cm"
+        document.getElementById("div1").style.weight="5cm"
+    </script>  
+</body>
+</html>

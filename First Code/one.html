@@ -131,16 +131,33 @@
     //     document.write("you pressed cancel")
     //    }
 
-    var string1 = "This is INT219 class"
-    document.write(string1.length)
-    document.write(string1.charAt(5))
-    document.write(string1.toLowerCase())
-    document.write(string1.toUpperCase())
-    document.write(string1.includes("java")) //to find the string is excited in main string or not
-    document.write(string1.slice(4,7))
-    document.write(string1.replace("is","are"))
-    string2="hello"
-    document.write(string2.trim())
+ //   var string1 = "This is INT219 class"
+    // document.write(string1.length)
+    // document.write(string1.charAt(5))
+    // document.write(string1.toLowerCase())
+    // document.write(string1.toUpperCase())
+    // document.write(string1.includes("java")) //to find the string is excited in main string or not
+    // document.write(string1.slice(4,7))
+    // document.write(string1.replace("is","are"))
+    // string2="hello"
+    // document.write(string2.trim())
+    let a = 0;
+    for(let i = 10; i <=100; i++){
+        if(i%7==0){
+            a=i;
+            break;
+        }
+    }
+    console.log(a);
+
+    for(let i=1; i<=20; i++){
+        if(i%3==0){
+            continue;
+        }else{
+            console.log(i);
+        }
+    }
+    
     </script>
 </body>
 </html>

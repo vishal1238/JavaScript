@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // body-->div-->h1-->Introduction
+        // var div1=document.createElement("div")
+        // var h1=document.createElement("h1")
+        // h1.textContent="Introduction"
+        // document.body.append(div1)
+        // // document.body.appendChild(div1) ----------------  differnce b/w appendChild & append
+        // div1.append(h1)
+
+        //body--> p 
+        var div1=document.createElement("div")
+        var p=document.createElement("p")
+        var h1=document.createElement("h1")
+        var button=document.createElement("button")
+        var img1=document.createElement("img")
+        img1.setAttribute("src", "cricket.jpg")
+        h1.textContent="DOM"
+        p.textContent="Hello World"
+        button.textContent="CLick here"
+        document.body.append(div1)
+        div1.append(img1)
+        div1.append(p)
+        div1.append(h1)
+        h1.append(button)
+        //div --> button
+        // var div1=document.createElement("div")
+        // document.body.append(p)
+        // div1.append(button)
+    </script>
+</body>
+</html>
