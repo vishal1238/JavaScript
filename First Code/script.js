@@ -7,6 +7,8 @@
 // //     var a = 10;
 // //     console.log(a)
 
+const { compile } = require("tailwindcss")
+
 // // }
 // // {
 // //     let b = 11;
@@ -102,12 +104,53 @@
 // console.log(fact(5))
 
 
-var obj = {name:"vishal",
-    age:30,
-    city:"patiala",
-    marks: 100,
-    // display:function(){
-    //     document.write("print")
-    // }
-}
-console.log(obj)
+// var obj = {name:"vishal",
+//     age:30,
+//     city:"patiala",
+//     marks: 100,
+//     // display:function(){
+//     //     document.write("print")
+//     // }
+//     obj.display = function(){
+//         return "display"
+//     }
+// }
+
+// console.log(obj.name+"<br>")
+// console.log(obj.display()+"<br>")
+// for(i in obj){
+//     console.log(i + ": " + obj[i]);
+// }
+
+// var obj = abc1()
+
+// function abc1(name,city){
+//     this.name=name
+//     this.city=city
+// }
+// var obj2 = new abc1("Arwin","Patiala")
+// console.log(obj2.name)
+// console.log(obj2.city)
+
+
+// Array
+
+// var arr=[10,4,3,5,3]
+// arr[100] = 45
+// console.log(arr)
+
+// var arr1 = new Array()
+// arr1[0] = 10
+// arr1[2] = 30
+// console.log(arr1)
+
+
+var arr = [10, 4, 6, 2, 6, 9, 34, 3, 5, 19];  
+let max = arr[0];
+
+for (let i = 1; i < arr.length; i++) { 
+    if (max < arr[i]) {  
+        max = arr[i];  
+    }  
+}  
+console.log("max element of array is : ", max);  
