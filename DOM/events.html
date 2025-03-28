@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #div1{
+            border: 2px solid black;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
     <button onclick="clicked()">click button</button>
     <button id="b1">Click</button>
+    <div id="div1"></div>
     <script>
+        document.getElementById("div1").addEventListener('mousedown',function(){
+            change('green')
+        })
+        function change(ele){
+            document.getElementById("div1").style.backgroundColor=ele
+        }
         document.getElementById("b1").addEventListener('contextmenu',clicked)
         function clicked(){
             alert("welcome user")
