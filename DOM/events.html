@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button onclick="clicked()">click button</button>
+    <button id="b1">Click</button>
+    <script>
+        document.getElementById("b1").addEventListener('contextmenu',clicked)
+        function clicked(){
+            alert("welcome user")
+        }
+        // document.getElementById("b1")
+    </script>
 </body>
 </html>
