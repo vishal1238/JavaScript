@@ -21,6 +21,15 @@
         document.getElementById("div1").addEventListener('mousedown',function(){
             change('green')
         })
+        document.getElementById("div1").addEventListener('mouseup',function(){
+            change('yellow')
+        })
+        document.getElementById("div1").addEventListener('mouseenter',function(){
+            change('orange')
+        })
+        document.getElementById("div1").addEventListener('mouseleave',function(){
+            change('blue')
+        })
         function change(ele){
             document.getElementById("div1").style.backgroundColor=ele
         }
