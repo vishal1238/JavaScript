@@ -17,22 +17,58 @@
     <button onclick="clicked()">click button</button>
     <button id="b1">Click</button>
     <div id="div1"></div>
+    <input type="text" onkeypress="press1()">
+    <input type="text" onkeydown="press2()">
+    <input type="text" onkeyup="press3()">
+
+    <form onsubmit="">
+        <input type="text" placeholder="enter something" onblur="change('red')"><br>
+        <input type="text" placeholder="enter something" onfocus="change('blue')"><br>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </form>
     <script>
         document.getElementById("div1").addEventListener('mousedown',function(){
             change('green')
         })
+
         document.getElementById("div1").addEventListener('mouseup',function(){
             change('yellow')
         })
+// use addremoveListener to remove any event
         document.getElementById("div1").addEventListener('mouseenter',function(){
             change('orange')
         })
+
         document.getElementById("div1").addEventListener('mouseleave',function(){
             change('blue')
         })
+
+        document.getElementById("div1").addEventListener('mousemove',function(){
+            coords(event)
+        })
+
+        function coords(ele){
+            var x=ele.clientX
+            var y=ele.clientY
+            result="x coords are"+x+"y coords are"+y
+            document.getElementById("div1").innerHTML=result
+        }
+
+        function press1(){
+            alert("key pressed")
+        }
+        function press2(){
+            alert("key down")
+        }
+        function press3(){
+            alert("key up")
+        }
+
         function change(ele){
             document.getElementById("div1").style.backgroundColor=ele
         }
+
         document.getElementById("b1").addEventListener('contextmenu',clicked)
         function clicked(){
             alert("welcome user")
