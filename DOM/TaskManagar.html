@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dynamic Task Manager</h1>
+        <input type="text" id="myInput" placeholder="Enter your Task">
+        <input type="submit" value="add task" onclick="addtask()">
+    <script>
+        function addtask(){
+            var text=document.getElementById("myInput").value
+            if (text === ""){
+                alert("Please enter some task")
+            }
+            else{
+                var ul=document.createElement("ul")
+                var li=document.createElement("li")
+                li.textContent=text
+
+                li.onclick = function() {  
+                ul.removeChild(li);  
+            };
+
+            button.textContent="delete task"
+            li.append(button)
+            button.addEventListener('click',function){
+                
+            }
+                ul.append(li)
+                document.body.append(ul)
+                document.getElementById("myInput").value=""
+            }
+        }
+    </script>
+</body>
+</html>

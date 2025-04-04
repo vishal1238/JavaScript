@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        .main-image{
+            width:520px;
+            margin:4px;
+            
+        }
+        #img1{
+            width:500px;
+            padding:5px;
+            height:400px;
+            background-color: azure;
+        }
+        .tc{
+            display:flex;
+            justify-content: center;
+            margin-top:4px;
+        }
+        .container{
+            display: flex;
+            justify-content:center;
+            
+        }
+        .btn{
+            background-color: aqua; padding:10px;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+    <div id="container">
+        <div class="main-image">
+            <img src="image/image1.jpg" id="img1">
+        </div>
+        <input type="submit" id="prev" value="prev" class="btn">
+        <input type="submit" id="next" value="next" class="btn">
+        <div class="tc">
+            <img class="t"src="image/image2.jpg" height="250px" >
+            <img class="t"src="image/image3.jpg" height="250px">
+            <img class="t"src="image/image4.jpg" height="250px">
+            <img class="t"src="image/image5.jpg" height="250px">
+        </div>
+    </div>
+</center>
+
+<script>
+    let currentIndex = 0
+    var mi=document.getElementById("img1")
+    var thumbnails=document.querySelectorAll(".t")
+    for(let i=0;i<thumbnails.length;i++){
+        thumbnails[i].addEventListener('click',function(){
+            mi.src=thumbnails[i].src
+            currentIndex=i
+        })
+    }
+    document.getElementById("prev").addEventListener('click',function(){
+        currentIndex= (currentIndex -1 + thumbnails.length) % thumbnails.length
+        mi.src=thumbnails[currentIndex].src;
+    });
+    document.getElementById("next").addEventListener('click',function(){
+        currentIndex= (currentIndex + 1) % thumbnails.length
+        mi.src=thumbnails[currentIndex].src;
+    });
+
+</script>
+</body>
+</html>
