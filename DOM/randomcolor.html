@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        #box{
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+        }
+        button{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Click to Change Background Color</h1>
+        <div id="box"></div>
+        <button onclick="changeColor()">Pick a Color</button>
+    </div>
+    <script>
+        const colors = ["#FF5733","33FF57","#3357FF", "#F0E68C", "#FF1493", "00CED1"];
+        
+        function changeColor(){
+            const randomIndex = Math.floor(Math.random()*colors.length);
+            box.style.backgroundColor = colors[randomIndex];
+
+        }
+    </script>
+</body>
+</html>

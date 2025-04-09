@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 10px;
+            cursor: pointer;
+        }
+        .gallery img{
+            width: 300px;
+            height: 300px;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+        #lightbox{
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        #lightbox img{
+            height: 300px;
+            width: 400px;
+            background-color: black;
+            border: 2px solid white;
+            padding: 4px;
+
+        }
+        .arrow{
+            font-size: 3rem;
+            color: white;
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+            transform: translateY(-50%);
+            padding: 10px;
+        }
+        #left{
+            left: 30px;
+        }
+        #right{
+            right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img id="sliderImage" src="image/image1.jpg" alt="Image 1"> 
+        <img id="sliderImage" src="image/image2.jpg" alt="Image 2"> 
+        <img id="sliderImage" src="image/image3.jpg" alt="Image 3"> 
+        <img id="sliderImage" src="image/image4.jpg" alt="Image 4"> 
+        <img id="sliderImage" src="image/image5.jpg" alt="Image 5"> 
+        <img id="sliderImage" src="image/image6.png" alt="Image 6">  
+        <img id="sliderImage" src="image/image7.png" alt="Image 6">  
+    </div>
+    <div id="lightbox">
+        <div class="arrow" id="left">&#10094</div>
+        <img src="" id="lightbox-img">
+        <div class="arrow" id="right">&#10095</div>
+
+    </div>
+    <script>
+        var lightbox = document.getElementById("lightbox")
+        var lightboxImg = document.getElementById("lightbox-img")
+        var images = document.querySelectorAll(".gallery img")
+        var leftArrow = document.getElementById("left")
+        var rightArrow = document.getElementById("right")
+        var currentIndex=0
+        for(let i= 0; i < images.length; i++){
+            images[i].addEventListener('click', function(){
+                lightboxImg.src=images[i].src
+                currentIndex=i
+                lightbox.style.display="flex"
+            })
+        }
+        leftArrow.addEventListener('click', function(){
+            currentIndex=(currentIndex-1+images.length)%images.length
+            lightboxImg.src=images[currentIndex].src
+        })
+        rightArrow.addEventListener('click', function(){
+            currentIndex=(currentIndex+1)%images.length
+            lightboxImg.src=images[currentIndex].src
+        })
+        lightbox.addEventListener('click',function(e){
+            if(e.target === lightbox){
+                lightbox.style.display="none"
+            }
+        })
+    </script>
+</body>
+</html>
